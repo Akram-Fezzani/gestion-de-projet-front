@@ -1,0 +1,286 @@
+<app-index-navbar></app-index-navbar>
+<section class="header relative pt-16 items-center flex h-screen max-h-860-px">
+  <div class="container mx-auto items-center flex flex-wrap">
+    <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+      <div class="pt-32 sm:pt-0">
+        <h2 class="font-semibold text-4xl text-blueGray-600">
+          Vinder - To make your project easier.
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+          Vinder is Free and Open Source. It does help you manage your team, projects and tasks
+          <a
+            href="https://tailwindcss.com/?ref=creativetim"
+            class="text-blueGray-600"
+            target="_blank"
+          >
+          </a>
+
+        </p>
+        <div class="mt-12">
+          <button
+          [routerLink]="['/auth/login']"
+
+            target="_blank"
+            class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-red-600 active:bg-red-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+          >
+          <i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
+           Login
+          </button>
+          <button
+            class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+            target="_blank"
+            [routerLink]="['/auth/register']"
+          >
+          <i class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>
+
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img
+    class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+    src="assets/img/4320863.jpg"
+    alt="..."
+  />
+</section>
+
+<section class="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+  <div
+    class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+    style="transform: translateZ(0)"
+  >
+    <svg
+      class="absolute bottom-0 overflow-hidden"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      version="1.1"
+      viewBox="0 0 2560 100"
+      x="0"
+      y="0"
+    >
+      <polygon
+        class="text-blueGray-100 fill-current"
+        points="2560 0 2560 100 0 100"
+      ></polygon>
+    </svg>
+  </div>
+  <div class="container mx-auto">
+    <div class="flex flex-wrap items-center">
+      <div
+        class="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32"
+      >
+        <div
+          class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-red-600"
+        >
+          <img
+            alt="..."
+            src="assets/img/5325581.jpg"
+                        class="w-full align-middle rounded-t-lg"
+          />
+          <blockquote class="relative p-8 mb-4">
+            <svg
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 583 95"
+              class="absolute left-0 w-full block h-95-px -top-94-px"
+            >
+              <polygon
+                points="-30,95 583,95 583,65"
+                class="text-red-600 fill-current"
+              ></polygon>
+            </svg>
+            <h4 class="text-xl font-bold text-white">
+              What is project management?
+            </h4>
+            <p class="text-md font-light mt-2 text-white">
+              Project management is the application of processes, methods, skills,
+              knowledge and experience to achieve specific project objectives according
+              to the project acceptance criteria within agreed parameters.
+              Project management has final deliverables that are constrained to a finite timescale and budget.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="w-full md:w-6/12 px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-6/12 px-4">
+            <div class="relative flex flex-col mt-4">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                >
+                  <i class="fas fa-sitemap"></i>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">Team Management</h6>
+                <p class="mb-4 text-blueGray-500">
+                  Organize to administer and coordinate a group of individuals to perform a task.
+                </p>
+              </div>
+            </div>
+            <div class="relative flex flex-col min-w-0">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                >
+                  <i class="fas fa-drafting-compass"></i>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">
+                  Project planning
+                </h6>
+                <p class="mb-4 text-blueGray-500">
+                   tells everyone involved where you're going and how you're going to get there.               </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 px-4">
+            <div class="relative flex flex-col min-w-0 mt-4">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                >
+                  <i class="fas fa-newspaper"></i>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">Task Management</h6>
+                <p class="mb-4 text-blueGray-500">
+                  Monitor your project's tasks through their various stages from start to finish.
+                </p>
+              </div>
+            </div>
+            <div class="relative flex flex-col min-w-0">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
+                >
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <h6 class="text-xl mb-1 font-semibold">Documentation</h6>
+                <p class="mb-4 text-blueGray-500">
+                  The platform allows users to exchange documentation in all project phases to insure the good workflow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container mx-auto px-4 pb-32 pt-48">
+    <div class="items-center flex flex-wrap">
+      <div class="w-full md:w-5/12 ml-auto px-12 md:px-4">
+        <div class="md:pr-12">
+          <div
+            class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+          >
+            <i class="fas fa-file-alt text-xl"></i>
+          </div>
+          <h3 class="text-3xl font-semibold">Why Vinder ?</h3>
+          <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+            Project planning is a discipline addressing how to complete a project in a certain timeframe,
+             usually with defined stages and designated resources.
+              One view of project planning divides the activity into these steps:
+          </p>
+          <ul class="list-none mt-6">
+            <li class="py-2">
+              <div class="flex items-center">
+                <div>
+                  <span
+                    class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="text-blueGray-500">
+                    setting measurable objectives
+
+                  </h4>
+                </div>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="flex items-center">
+                <div>
+                  <span
+                    class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
+                  >
+                    <i class="fab fa-html5"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="text-blueGray-500">
+                    scheduling
+                  </h4>
+                </div>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="flex items-center">
+                <div>
+                  <span
+                    class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3"
+                  >
+                    <i class="far fa-paper-plane"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="text-blueGray-500">
+                    planning tasks
+                  </h4>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
+        <img
+          alt="..."
+          class="max-w-full rounded-lg shadow-xl"
+          style="
+            transform: scale(1) perspective(1040px) rotateY(-11deg)
+              rotateX(2deg) rotate(2deg);
+          "
+          src="assets/img/3081627.jpg"
+        />
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+<section class="pb-16 bg-blueGray-200 relative pt-32">
+  <div
+    class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+    style="transform: translateZ(0)"
+  >
+    <svg
+      class="absolute bottom-0 overflow-hidden"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      version="1.1"
+      viewBox="0 0 2560 100"
+      x="0"
+      y="0"
+    >
+      <polygon
+        class="text-blueGray-200 fill-current"
+        points="2560 0 2560 100 0 100"
+      ></polygon>
+    </svg>
+  </div>
+
+
+</section>
+<app-footer></app-footer>
