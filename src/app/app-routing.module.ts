@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AuthenticationGuard } from "./guard/authentication.guard";
 
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
@@ -34,6 +35,9 @@ const routes: Routes = [
     ],
   },
   // auth views
+
+  { path: "login", component: LoginComponent,canActivate : [AuthenticationGuard] },
+
   {
     path: "auth",
     component: AuthComponent,

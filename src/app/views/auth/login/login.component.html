@@ -1,8 +1,15 @@
+<app-auth-navbar></app-auth-navbar>
+
+<section class="header relative pt-16 items-center bg-blueGray-200 flex h-screen max-h-860-px">
+  <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+
+
+
 <div class="container mx-auto px-4 h-full">
   <div class="flex content-center items-center justify-center h-full">
-    <div class="w-full lg:w-4/12 px-4">
+
       <div
-        class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0"
+        class="relative flex flex-col min-w-0 break-words w-full mb-6  bg-blueGray-200 shadow-lg rounded-lg  border-0"
       >
         <div class="rounded-t mb-0 px-6 py-6">
 
@@ -54,26 +61,36 @@
             <a
             class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
             (click)="login()"
-            [routerLink]="['/auth/register']"
+            [routerLink]="['/']"
           >
           Sign In
           </a>
             </div>
           </form>
+          <div class="flex flex-wrap mt-6 relative">
+            <div class="w-1/2">
+              <a href="javascript:void(0)" class="text-blueGray-800">
+                <small>Forgot password?</small>
+              </a>
+            </div>
+            <div class="w-1/2 text-right">
+              <a [routerLink]="['/auth/register']" class="text-blueGray-800">
+                <small>Create new account</small>
+              </a>
+            </div>
         </div>
       </div>
-      <div class="flex flex-wrap mt-6 relative">
-        <div class="w-1/2">
-          <a href="javascript:void(0)" class="text-blueGray-200">
-            <small>Forgot password?</small>
-          </a>
-        </div>
-        <div class="w-1/2 text-right">
-          <a [routerLink]="['/auth/register']" class="text-blueGray-200">
-            <small>Create new account</small>
-          </a>
-        </div>
       </div>
-    </div>
   </div>
 </div>
+</div>
+
+<img
+  class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+  src="assets/img/pattern_angular.png"
+  alt="..."
+/>
+</section>
+
+
+<app-footer></app-footer>
