@@ -49,6 +49,8 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { HttpClientModule } from "@angular/common/http";
+import { ResetComponent } from "./components/reset/reset.component";
+import { UpdateprofileComponent } from './components/updateprofile/updateprofile.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +88,8 @@ import { HttpClientModule } from "@angular/common/http";
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    ResetComponent,
+    UpdateprofileComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { ResetComponent } from "./components/reset/reset.component";
 import { AuthenticationGuard } from "./guard/authentication.guard";
 
 // layouts
@@ -35,9 +36,8 @@ const routes: Routes = [
     ],
   },
   // auth views
-
+  { path: "reset", component: ResetComponent },
   { path: "login", component: LoginComponent,canActivate : [AuthenticationGuard] },
-
   {
     path: "auth",
     component: AuthComponent,
