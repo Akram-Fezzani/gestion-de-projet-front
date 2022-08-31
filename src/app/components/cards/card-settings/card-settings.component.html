@@ -21,9 +21,13 @@
               Project Name
             </label>
             <input
-              type="text"
-              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              value="Project Name"
+            type="text"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            placeholder="Project Name"
+            [(ngModel)]="project.name"
+            name="name"
+            required
+            minlength="5"
             />
           </div>
         </div>
@@ -36,9 +40,14 @@
             Location
             </label>
             <input
-              type="text"
-              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              value="Location"
+            type="text"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            value="Location"
+            placeholder="Location"
+            [(ngModel)]="project.location"
+            name="location"
+            required
+            minlength="5"
             />
           </div>
         </div>
@@ -51,9 +60,13 @@
               Estimated Cost
             </label>
             <input
-              type="text"
-              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              value="Estimated Cost"
+            type="text"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            placeholder="Estimated Cost"
+            [(ngModel)]="project.estimatedCost"
+            name="estimatedCost"
+            required
+            minlength="5"
             />
           </div>
         </div>
@@ -66,9 +79,13 @@
             Estimated end date
             </label>
             <input
-              type="date"
-              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              value="Jesse"
+            type="date"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            value=" estimatedEndDate"
+            placeholder="Estimated end date"
+            [(ngModel)]="project.estimatedEndDate"
+            name="estimatedEndDate"
+            required
             />
           </div>
         </div>
@@ -90,6 +107,9 @@
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               rows="4"
+              placeholder="Description"
+              [(ngModel)]="project.description"
+              required
             >
             Description
                 </textarea
@@ -98,9 +118,9 @@
 
 
             <div>
+              <label for="volume">Advancement</label>
               <input type="range" id="volume" name="volume"
-                     min="0" max="11">
-              <label for="volume">Volume</label>
+                     min="0" max="100">
             </div>
 
 
@@ -121,11 +141,20 @@
             <hr class="mt-6 border-b-1 border-blueGray-300" />
 <br>
 
-            <button
-            class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"            type="button"
+
+
+
+          <button
+          [disabled]="disableButton"
+          id="registerButton"
+          class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"            type="button"
+          href="javascript:void(0)"
+            (click)="AddProject()"
           >
-            Create
-          </button>
+           Create account
+        </button>
+
+
 
         </div>
       </div>

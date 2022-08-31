@@ -9,9 +9,7 @@ import { RegisterService } from "src/app/services/registerservice/register.servi
 })
 export class RegisterComponent implements OnInit {
   isCollapsed = true;
-  focus!:any;
-  focus1!:any;
-  focus2!:any;
+  
   user: User=new User();
   disableButton: boolean = false;
 

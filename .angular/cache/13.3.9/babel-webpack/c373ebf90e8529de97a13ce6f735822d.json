@@ -1,1 +1,0 @@
-{"ast":null,"code":"currentUser;\nany;\n\ngettingUser: boolean = true;\n\nexport class AppComponent {\n  constructor() {\n    this.title = \"angular-dashboard-page\";\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

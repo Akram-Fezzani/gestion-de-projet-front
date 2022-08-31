@@ -51,6 +51,8 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
 import { HttpClientModule } from "@angular/common/http";
 import { ResetComponent } from "./components/reset/reset.component";
 import { UpdateprofileComponent } from './components/updateprofile/updateprofile.component';
+import { UpdateprojectComponent } from './components/updateproject/updateproject.component';
+import { CardUpdateProjectComponent } from './components/cards/card-update-project/card-update-project.component';
 
 @NgModule({
   declarations: [
@@ -90,10 +92,13 @@ import { UpdateprofileComponent } from './components/updateprofile/updateprofile
     ProfileComponent,
     ResetComponent,
     UpdateprofileComponent,
+    UpdateprojectComponent,
+    CardUpdateProjectComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,
      FormsModule,
+     
      HttpClientModule
     ],
   providers: [],

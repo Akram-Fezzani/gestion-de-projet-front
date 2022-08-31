@@ -11,7 +11,6 @@ import { AuthComponent } from "./layouts/auth/auth.component";
 // admin views
 import { DashboardComponent } from "./views/admin/dashboard/dashboard.component";
 import { MapsComponent } from "./views/admin/maps/maps.component";
-import { SettingsComponent } from "./views/admin/settings/settings.component";
 import { TablesComponent } from "./views/admin/tables/tables.component";
 
 // auth views
@@ -22,6 +21,11 @@ import { RegisterComponent } from "./views/auth/register/register.component";
 import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
+//project views
+import { SettingsComponent } from "./views/admin/settings/settings.component";
+import { UpdateprojectComponent } from "./components/updateProject/updateproject.component";
+
+
 
 const routes: Routes = [
   // admin views
@@ -39,6 +43,8 @@ const routes: Routes = [
   // auth views
   { path: "reset", component: ResetComponent },
   { path: "updateprofile", component: UpdateprofileComponent },
+  { path: "updateproject", component: UpdateprojectComponent },
+
 
   { path: "login", component: LoginComponent,canActivate : [AuthenticationGuard] },
   {

@@ -1,10 +1,15 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { Router } from "@angular/router";
+import { UserService } from "src/app/services/user/user.service";
 
 @Component({
   selector: "app-card-stats",
   templateUrl: "./card-stats.component.html",
 })
 export class CardStatsComponent implements OnInit {
+  nbrActiveUsers!:number;
+  nbrUsers!:number;
+  constructor(private us:UserService, private _router:Router) { }
   @Input()
   get statSubtitle(): string {
     return this._statSubtitle;
@@ -87,7 +92,24 @@ export class CardStatsComponent implements OnInit {
   }
   private _statIconColor = "bg-red-500";
 
-  constructor() {}
 
   ngOnInit(): void {}
+
+
+
+
+
+  getnumberofusers(){
+    this.us.getnumberofusers().subscribe( (data:any) =>{
+      this.nbrUsers = data;
+      },
+      (error:any) => console.log(error));  }
+
+
+
+  getnumberofactiveusers(){
+    this.us.getnumberofactiveusers().subscribe( (data:any) =>{
+      this.nbrActiveUsers = data;
+       },
+      (error:any) => console.log(error));  }
 }
