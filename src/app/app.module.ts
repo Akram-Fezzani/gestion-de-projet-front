@@ -55,9 +55,8 @@ import { UpdateprojectComponent } from './components/updateproject/updateproject
 import { CardUpdateProjectComponent } from './card-update-project/card-update-project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-
-
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [

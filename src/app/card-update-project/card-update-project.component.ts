@@ -10,14 +10,13 @@ import { ProjectService } from 'src/app/services/projectservice/project.service'
 })
 export class CardUpdateProjectComponent implements OnInit {
 
-  formatLabel(value: number) {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + '%';
+    formatLabel(value: number) {
+      if (value >= 1000) {
+        return Math.round(value / 1000) + '%';
+      }
+
+      return value;
     }
-
-    return value;
-  }
-
 
 
 
@@ -33,6 +32,16 @@ export class CardUpdateProjectComponent implements OnInit {
         console.log(r);
       },(error:any) => console.log(error));
   }
+
+
+
+
+
+
+
+
+
+
 
 
   ngOnInit(): void {}

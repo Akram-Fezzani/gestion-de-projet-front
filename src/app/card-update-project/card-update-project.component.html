@@ -1,11 +1,10 @@
 <div
-  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
->
-  <div class="rounded-t bg-white mb-0 px-6 py-6">
+class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-700 border-0">
+  <div class="rounded-t bg-red-900 mb-0 px-6 py-6">
     <h3
-          class="font-semibold text-lg"
-        >
-          Update project
+    class="font-semibold text-lg text-white text-xl font-bold"
+    >
+          UPDATE PROJECT
         </h3>
   </div>
   <br>
@@ -17,7 +16,7 @@
         <div class="w-full lg:w-6/12 px-4">
           <div class="relative w-full mb-3">
             <label
-              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
               Project Name
@@ -36,7 +35,7 @@
         <div class="w-full lg:w-6/12 px-4">
           <div class="relative w-full mb-3">
             <label
-              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
             Location
@@ -56,7 +55,7 @@
         <div class="w-full lg:w-6/12 px-4">
           <div class="relative w-full mb-3">
             <label
-              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
               Estimated Cost
@@ -75,7 +74,7 @@
         <div class="w-full lg:w-6/12 px-4">
           <div class="relative w-full mb-3">
             <label
-              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
             Estimated end date
@@ -91,6 +90,19 @@
             />
           </div>
         </div>
+
+
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+            manager
+            </label>
+            
+          </div>
+        </div>
       </div>
 
 
@@ -100,7 +112,7 @@
         <div class="w-full lg:w-12/12 px-4">
           <div class="relative w-full mb-3">
             <label
-              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
               Description
@@ -121,19 +133,26 @@
 
             <div>
               <label
-              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
             Advancement
             </label>
 
-              
+
                      <mat-slider color="warn"
                      id="advancement" name="advancement"
                      min="0" max="100"
-                     [(ngModel)]="project.advancement"></mat-slider>
+                     [(ngModel)]="project.advancement"
+                     thumbLabel
+                     [displayWith]="formatLabel"
+                     step="1000"
+                     min="0"
+                     max="100000"
+                     aria-label="units"
+                     >
+                    </mat-slider>
 <hr>
-
             </div>
 
 
@@ -143,7 +162,7 @@
             <div class="w-full lg:w-6/12 px-4">
               <div class="relative w-full mb-3">
                 <label
-                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                  class="block uppercase text-white text-xs font-bold mb-2"
                   htmlFor="grid-password"
                 >
                   this project is finished?
@@ -162,17 +181,18 @@
 
 
 
+            <hr class="mt-6 border-b-1 border-blueGray-300" />
 
             <div class="w-full lg:w-6/12 px-4">
               <div class="relative w-full mb-3">
                 <label
-                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                  class="block uppercase text-white text-xs font-bold mb-2"
                   htmlFor="grid-password"
                 >
                 Files Section
                 </label>
                 <button
-                class="bg-red-600 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+                class="bg-white text-red-900 active:bg-red-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
                 type="button"
               >
                 Add Files
@@ -182,41 +202,23 @@
 
 
 
-              <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
-                Files Section
-              </h6>
 
             </div>
             <hr class="mt-6 border-b-1 border-blueGray-300" />
 <br>
 
 
-<mat-slider
-  thumbLabel
-  [displayWith]="formatLabel"
-  tickInterval="1000"
-  step="1000"
-  min="0"
-  max="100000"
-  aria-label="units"></mat-slider>
+
           <button
           [disabled]="disableButton"
           id="registerButton"
-          class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"            type="button"
+          class="bg-red-900 text-white active:bg-red-900 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
           href="javascript:void(0)"
             (click)="updateProject()"
           >
            update project
         </button>
         </div>
-<mat-slider
-  thumbLabel
-  [displayWith]="formatLabel"
-  tickInterval="1000"
-  step="1000"
-  min="0"
-  max="100000"
-  aria-label="units"></mat-slider>
       </div>
     </form>
   </div>
