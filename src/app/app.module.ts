@@ -52,7 +52,12 @@ import { HttpClientModule } from "@angular/common/http";
 import { ResetComponent } from "./components/reset/reset.component";
 import { UpdateprofileComponent } from './components/updateprofile/updateprofile.component';
 import { UpdateprojectComponent } from './components/updateproject/updateproject.component';
-import { CardUpdateProjectComponent } from './components/cards/card-update-project/card-update-project.component';
+import { CardUpdateProjectComponent } from './card-update-project/card-update-project.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -98,8 +103,13 @@ import { CardUpdateProjectComponent } from './components/cards/card-update-proje
   imports: [BrowserModule,
      AppRoutingModule,
      FormsModule,
-     
-     HttpClientModule
+     MatSlideToggleModule,
+     MatSliderModule,
+     HttpClientModule,
+     BrowserModule,
+    FormsModule,
+    MatSlideToggleModule,
+     BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent],

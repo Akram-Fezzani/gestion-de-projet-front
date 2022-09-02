@@ -17,11 +17,11 @@ export class ProjectService {
   }
 
   getProjectById(userId:string): Observable<any> {
-    return this._http.get(this.baseURL + 'getProjectById/'+userId);
+    return this._http.get(this.baseURL + '/getProjectById/'+userId);
   }
 
   updateProject(project:Project,id:string):Observable<any>{
-    return this._http.post(this.baseURL + '/getProjectById/'+id,project);
+    return this._http.post(this.baseURL + '/updateProject/'+id,project);
 
 
   }
