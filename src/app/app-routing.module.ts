@@ -24,6 +24,7 @@ import { ProfileComponent } from "./views/profile/profile.component";
 //project views
 import { SettingsComponent } from "./views/admin/settings/settings.component";
 import { UpdateprojectComponent } from "./components/updateProject/updateproject.component";
+import { CardAffectempComponent } from "./card-affectemp/card-affectemp.component";
 
 
 
@@ -44,6 +45,8 @@ const routes: Routes = [
   { path: "reset", component: ResetComponent },
   { path: "updateprofile", component: UpdateprofileComponent },
   { path: "updateproject", component: UpdateprojectComponent },
+  { path: "affectemp", component: CardAffectempComponent },
+
 
 
   { path: "login", component: LoginComponent,canActivate : [AuthenticationGuard] },

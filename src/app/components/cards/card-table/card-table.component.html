@@ -80,7 +80,7 @@ Projects list
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let p of projects">
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
           >
@@ -88,51 +88,34 @@ Projects list
               class="ml-3 font-bold"
               [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
             >
-              React Material Dashboard
-            </span>
+            <td>{{p.name}}</td>
+          </span>
           </th>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
-            $2,200 USD
+          {{p.estimatedCost}}
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <i class="fas fa-circle text-emerald-500 mr-2"></i>
-            completed
+            {{p.status}}
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <div class="flex">
-              <img
-                src="assets/img/team-1-800x800.jpg"
-                alt="..."
-                class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-              />
-              <img
-                src="assets/img/team-2-800x800.jpg"
-                alt="..."
-                class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-              />
-              <img
-                src="assets/img/team-3-800x800.jpg"
-                alt="..."
-                class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-              />
-              <img
-                src="assets/img/team-4-470x470.png"
-                alt="..."
-                class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-              />
+              <td>{{p.manager}}</td>
+
+
             </div>
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <div class="flex items-center">
-              <span class="mr-2">100%</span>
+              <span class="mr-2">{{p.advancement}}%</span>
               <div class="relative w-full">
                 <div
                   class="overflow-hidden h-2 text-xs flex rounded bg-emerald-200"

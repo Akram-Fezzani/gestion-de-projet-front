@@ -25,4 +25,8 @@ export class ProjectService {
 
 
   }
+
+  listOfProjects(): Observable<any> {
+    return this._http.get(this.baseURL + '/getProjects');
+  }
 }
