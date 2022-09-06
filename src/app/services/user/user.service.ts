@@ -35,4 +35,12 @@ export class UserService {
     return this.http.get(this.baseUrl + 'displayChart');
   }
 
+  getUsers(): Observable<any> {
+    return this.http.get(this.baseUrl + 'getAllUsers');
+  }
+
+
+  getManagers(): Observable<any> {
+    return this.http.get(this.baseUrl + 'getAllManagers');
+  }
 }

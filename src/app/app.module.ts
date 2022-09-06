@@ -57,7 +57,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { CardAffectempComponent } from './card-affectemp/card-affectemp.component';
+import { CardAffectempComponent } from './components/cards/card-affectemp/card-affectemp.component';
+import {MatSelectModule} from '@angular/material/select';
+import {ReactiveFormsModule } from '@angular/forms';
+import { CardAffectManagerComponent } from './components/cards/card-affect-manager/card-affect-manager.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +103,7 @@ import { CardAffectempComponent } from './card-affectemp/card-affectemp.componen
     UpdateprojectComponent,
     CardUpdateProjectComponent,
     CardAffectempComponent,
+    CardAffectManagerComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,
@@ -109,6 +113,9 @@ import { CardAffectempComponent } from './card-affectemp/card-affectemp.componen
      HttpClientModule,
      BrowserModule,
     FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
     MatSlideToggleModule,
      BrowserAnimationsModule
     ],

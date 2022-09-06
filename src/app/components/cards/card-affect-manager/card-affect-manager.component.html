@@ -1,0 +1,36 @@
+<div
+  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded "
+>
+  <div class="rounded-t mb-0 px-4 py-3 bg-transparent">
+    <div class="flex flex-wrap items-center ">
+      <div class="relative w-full max-w-full flex-grow flex-1">
+
+        <h2 class="text-xl font-semibold text-red-600">Affect Manager</h2>
+      </div>
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Employees</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value?.[0] || ''}}
+          <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+            (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping.username}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+  <div class="p-4 flex-auto">
+
+
+
+    <button
+    id="addEmployee"
+    class="bg-red-600 text-white active:bg-red-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+    >
+     Affect
+  </button>
+  </div>
+</div>

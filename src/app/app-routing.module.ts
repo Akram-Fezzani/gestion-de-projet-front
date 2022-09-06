@@ -24,7 +24,7 @@ import { ProfileComponent } from "./views/profile/profile.component";
 //project views
 import { SettingsComponent } from "./views/admin/settings/settings.component";
 import { UpdateprojectComponent } from "./components/updateProject/updateproject.component";
-import { CardAffectempComponent } from "./card-affectemp/card-affectemp.component";
+import { CardAffectempComponent } from "./components/cards/card-affectemp/card-affectemp.component";
 
 
 
