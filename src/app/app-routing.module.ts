@@ -25,6 +25,8 @@ import { ProfileComponent } from "./views/profile/profile.component";
 import { SettingsComponent } from "./views/admin/settings/settings.component";
 import { UpdateprojectComponent } from "./components/updateProject/updateproject.component";
 import { CardAffectempComponent } from "./components/cards/card-affectemp/card-affectemp.component";
+import { TasksComponent } from "./components/tasks/tasks.component";
+import { UpdateTaskComponent } from "./components/update-task/update-task.component";
 
 
 
@@ -38,6 +40,8 @@ const routes: Routes = [
       { path: "settings", component: SettingsComponent },
       { path: "tables", component: TablesComponent },
       { path: "maps", component: MapsComponent },
+
+
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },
@@ -46,6 +50,9 @@ const routes: Routes = [
   { path: "updateprofile", component: UpdateprofileComponent },
   { path: "updateproject", component: UpdateprojectComponent },
   { path: "affectemp", component: CardAffectempComponent },
+  { path: "task", component: TasksComponent },
+  { path: "updatetask", component: UpdateTaskComponent },
+
 
 
 

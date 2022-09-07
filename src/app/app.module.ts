@@ -61,6 +61,12 @@ import { CardAffectempComponent } from './components/cards/card-affectemp/card-a
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule } from '@angular/forms';
 import { CardAffectManagerComponent } from './components/cards/card-affect-manager/card-affect-manager.component';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
+import { CardUpdateTaskComponent } from './components/cards/card-update-task/card-update-task.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { TaskTableDropdownComponent } from './components/dropdowns/task-table-dropdown/task-table-dropdown.component';
+import { CardTableTaskComponent } from './components/cards/card-table-task/card-table-task.component';
+import { UpdateTaskComponent } from './components/update-task/update-task.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +110,12 @@ import { CardAffectManagerComponent } from './components/cards/card-affect-manag
     CardUpdateProjectComponent,
     CardAffectempComponent,
     CardAffectManagerComponent,
+    CreateTaskComponent,
+    CardUpdateTaskComponent,
+    TasksComponent,
+    TaskTableDropdownComponent,
+    CardTableTaskComponent,
+    UpdateTaskComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,

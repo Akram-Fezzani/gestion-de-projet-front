@@ -1,0 +1,199 @@
+<div
+class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-700 border-0">
+  <div class="rounded-t bg-red-600 mb-0 px-6 py-6">
+    <h3
+    class="font-semibold text-lg text-white text-xl font-bold"
+    >
+          CREATE TASK
+        </h3>
+  </div>
+  <br>
+
+  <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+    <form>
+
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Task Name
+            </label>
+            <input
+            type="text"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            placeholder="Task Name"
+            name="name"
+            required
+            minlength="5"
+            />
+          </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Estimated Cost
+            </label>
+            <input
+            type="text"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            placeholder="Estimated Cost"
+            name="estimatedCost"
+            required
+            minlength="5"
+            />
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+            Estimated end date
+            </label>
+            <input
+            type="date"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            value=" estimatedEndDate"
+            placeholder="Estimated end date"
+            name="estimatedEndDate"
+            required
+            />
+          </div>
+        </div>
+
+
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+            manager
+            </label>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-12/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Description
+            </label>
+            <textarea
+              type="text"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              rows="4"
+              placeholder="Description"
+              required
+            >
+            Description
+                </textarea
+            >
+            <hr class="mt-6 border-b-1 border-blueGray-300" />
+
+
+            <div>
+              <label
+              class="block uppercase text-white text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+            Advancement
+            </label>
+
+
+                     <mat-slider color="warn"
+                     id="advancement" name="advancement"
+                     min="0" max="100"
+                     thumbLabel
+                     step="1000"
+                     min="0"
+                     max="100000"
+                     aria-label="units"
+                     >
+                    </mat-slider>
+<hr>
+            </div>
+
+
+
+
+
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="relative w-full mb-3">
+                <label
+                  class="block uppercase text-white text-xs font-bold mb-2"
+                  htmlFor="grid-password"
+                >
+                  this Task is finished?
+                </label>
+                <br />
+               No <mat-slide-toggle color="warn"
+               >Yes
+                </mat-slide-toggle>
+
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <hr class="mt-6 border-b-1 border-blueGray-300" />
+
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="relative w-full mb-3">
+                <label
+                  class="block uppercase text-white text-xs font-bold mb-2"
+                  htmlFor="grid-password"
+                >
+                Files Section
+                </label>
+                <button
+                class="bg-white text-red-600 active:bg-red-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+                type="button"
+              >
+                Add Files
+              </button>
+              </div>
+            </div>
+
+
+
+
+            </div>
+            <hr class="mt-6 border-b-1 border-blueGray-300" />
+<br>
+
+
+
+          <button
+          [disabled]="disableButton"
+          id="registerButton"
+          class="bg-red-600 text-white active:bg-red-900 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+          href="javascript:void(0)"
+          >
+           update Task
+        </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
