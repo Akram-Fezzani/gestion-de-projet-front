@@ -31,7 +31,7 @@ constructor(private router:Router,private ts:TaskService, private _router:Router
   }
 
 updateTask(){
-  this.ts.updateTask(this.task,"1").subscribe((r:any)=>{
+  this.ts.updateTask(this.task,"3").subscribe((r:any)=>{
       console.log(r);
     },(error:any) => console.log(error));
 }

@@ -4,7 +4,7 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
     <h3
     class="font-semibold text-lg text-white text-xl font-bold"
     >
-          UPDATE Task
+          CREATE TASK
         </h3>
   </div>
   <br>
@@ -26,6 +26,7 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
             placeholder="Task Name"
             name="name"
+            [(ngModel)]="task.name"
             required
             minlength="5"
             />
@@ -38,15 +39,17 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
               class="block uppercase text-white text-xs font-bold mb-2"
               htmlFor="grid-password"
             >
-              Estimated Cost
+              Max Cost
             </label>
             <input
             type="text"
             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
             placeholder="Estimated Cost"
-            name="estimatedCost"
+            name="maxCost"
             required
             minlength="5"
+            [(ngModel)]="task.maxCost"
+
             />
           </div>
         </div>
@@ -65,20 +68,9 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
             placeholder="Estimated end date"
             name="estimatedEndDate"
             required
+            [(ngModel)]="task.estimatedEndDate"
+
             />
-          </div>
-        </div>
-
-
-        <div class="w-full lg:w-6/12 px-4">
-          <div class="relative w-full mb-3">
-            <label
-              class="block uppercase text-white text-xs font-bold mb-2"
-              htmlFor="grid-password"
-            >
-            manager
-            </label>
-
           </div>
         </div>
       </div>
@@ -99,8 +91,11 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               rows="4"
+              name="description"
               placeholder="Description"
               required
+              [(ngModel)]="task.description"
+
             >
             Description
                 </textarea
@@ -115,17 +110,19 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
             >
             Advancement
             </label>
-
-
                      <mat-slider color="warn"
-                     id="advancement" name="advancement"
+                     id="advancement"
+                     name="advancement"
                      min="0" max="100"
+                     [(ngModel)]="task.advancement"
                      thumbLabel
+                     [displayWith]="formatLabel"
                      step="1000"
                      min="0"
                      max="100000"
                      aria-label="units"
                      >
+
                     </mat-slider>
 <hr>
             </div>
@@ -189,6 +186,8 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
           id="registerButton"
           class="bg-red-600 text-white active:bg-red-900 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
           href="javascript:void(0)"
+          (click)="updateTask()"
+
           >
            update Task
         </button>

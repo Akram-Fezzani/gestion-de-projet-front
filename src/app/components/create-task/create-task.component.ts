@@ -10,7 +10,17 @@ import { TaskService } from 'src/app/services/task/task.service';
 })
 export class CreateTaskComponent implements OnInit {
 
-  isCollapsed = true;
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + '%';
+    }
+
+    return value;
+  }
+
+
+
+isCollapsed = true;
 
   task: Task =new Task();
   disableButton: boolean = false;
