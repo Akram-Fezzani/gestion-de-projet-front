@@ -1,7 +1,7 @@
 <app-auth-navbar></app-auth-navbar>
 
-<section class="header relative pt-16 items-center bg-teal-400	 flex h-screen max-h-860-px"
-style="background-color:#e7e7e7">
+<section class="header relative pt-16 items-center bg-white flex h-screen max-h-860-px"
+>
   <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
 
 
@@ -10,7 +10,7 @@ style="background-color:#e7e7e7">
   <div class="flex content-center items-center justify-center h-full">
 
       <div
-        class="relative flex flex-col min-w-0 break-words w-full mb-6  bg-blueGray-200 shadow-lg rounded-lg  border-0"
+        class="relative flex flex-col min-w-0 break-words w-full mb-6  bg-blueGray-100 shadow-lg rounded-lg  border-0"
       >
         <div class="rounded-t mb-0 px-6 py-6">
 
@@ -60,7 +60,7 @@ style="background-color:#e7e7e7">
             </div>
             <div class="text-center mt-6">
             <a
-            class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+            class="bg-blueGray-800 text-white active:bg-red-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
             (click)="login()"
             [routerLink]="['/']"
           >
@@ -94,4 +94,4 @@ style="background-color:#e7e7e7">
 </section>
 
 
-<app-footer-admin></app-footer-admin>
+<app-footer-auth></app-footer-auth>

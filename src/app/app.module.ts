@@ -71,6 +71,7 @@ import { CardCreateReportComponent } from './components/cards/card-create-report
 import { CardTableReportComponent } from './components/cards/card-table-report/card-table-report.component';
 import { UpdatereportComponent } from './components/updatereport/updatereport.component';
 import { CardUpdateReportComponent } from './components/cards/card-update-report/card-update-report.component';
+import { FooterAuthComponent } from './components/footers/footer-auth/footer-auth.component';
 
 @NgModule({
   declarations: [
@@ -124,6 +125,7 @@ import { CardUpdateReportComponent } from './components/cards/card-update-report
     CardTableReportComponent,
     UpdatereportComponent,
     CardUpdateReportComponent,
+    FooterAuthComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,
