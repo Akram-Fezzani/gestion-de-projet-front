@@ -4,7 +4,7 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
     <h3
     class="font-semibold text-lg text-white text-xl font-bold"
     >
-          CREATE TASK
+          UPDATE TASK
         </h3>
   </div>
   <br>
@@ -140,7 +140,7 @@ class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-
                   this Task is finished?
                 </label>
                 <br />
-               No <mat-slide-toggle color="warn"
+               No <mat-slide-toggle color="warn" [(ngModel)]="task.state"
                >Yes
                 </mat-slide-toggle>
 

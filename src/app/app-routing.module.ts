@@ -27,6 +27,7 @@ import { UpdateprojectComponent } from "./components/updateProject/updateproject
 import { CardAffectempComponent } from "./components/cards/card-affectemp/card-affectemp.component";
 import { TasksComponent } from "./components/tasks/tasks.component";
 import { UpdateTaskComponent } from "./components/update-task/update-task.component";
+import { UpdatereportComponent } from "./components/updatereport/updatereport.component";
 
 
 
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: "affectemp", component: CardAffectempComponent },
   { path: "task", component: TasksComponent },
   { path: "updatetask", component: UpdateTaskComponent },
+  { path: "updatereport", component: UpdatereportComponent },
 
 
 

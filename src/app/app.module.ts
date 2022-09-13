@@ -67,6 +67,10 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskTableDropdownComponent } from './components/dropdowns/task-table-dropdown/task-table-dropdown.component';
 import { CardTableTaskComponent } from './components/cards/card-table-task/card-table-task.component';
 import { UpdateTaskComponent } from './components/update-task/update-task.component';
+import { CardCreateReportComponent } from './components/cards/card-create-report/card-create-report.component';
+import { CardTableReportComponent } from './components/cards/card-table-report/card-table-report.component';
+import { UpdatereportComponent } from './components/updatereport/updatereport.component';
+import { CardUpdateReportComponent } from './components/cards/card-update-report/card-update-report.component';
 
 @NgModule({
   declarations: [
@@ -116,6 +120,10 @@ import { UpdateTaskComponent } from './components/update-task/update-task.compon
     TaskTableDropdownComponent,
     CardTableTaskComponent,
     UpdateTaskComponent,
+    CardCreateReportComponent,
+    CardTableReportComponent,
+    UpdatereportComponent,
+    CardUpdateReportComponent,
   ],
   imports: [BrowserModule,
      AppRoutingModule,
