@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-};
+  ipAddress: 'http://' + 'localhost' + ':',
+  // ipAddress: 'http://' + '192.168.1.20'  + ':',
+  port: '8085'};
 
 /*
  * For easier debugging in development mode, you can import the following file

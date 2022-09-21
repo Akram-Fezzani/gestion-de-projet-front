@@ -6,7 +6,6 @@ import { AuthService } from 'src/app/services/authservice/auth.service';
 import { TokenStorageService } from 'src/app/services/tokenstorageservice/token-storage.service';
 import { AppComponent } from 'src/app/app.component';
 import { User } from 'src/app/models/User';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user/user.service';
 import { AuthLoginInfo } from 'src/app/models/login-info';
 
