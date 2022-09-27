@@ -38,30 +38,30 @@ const routes: Routes = [
     path: "admin",
     component: AdminComponent,
     children: [
-      { path: "dashboard", component: DashboardComponent },
-      { path: "settings", component: SettingsComponent },
-      { path: "tables", component: TablesComponent },
-      { path: "maps", component: MapsComponent },
+      { path: "dashboard", component: DashboardComponent ,canActivate : [AuthenticationGuard] },
+      { path: "settings", component: SettingsComponent ,canActivate : [AuthenticationGuard]},
+      { path: "tables", component: TablesComponent ,canActivate : [AuthenticationGuard]},
+      { path: "maps", component: MapsComponent ,canActivate : [AuthenticationGuard]},
 
 
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },
   // auth views
-  { path: "reset", component: ResetComponent },
-  { path: "updateprofile", component: UpdateprofileComponent },
-  { path: "updateproject", component: UpdateprojectComponent },
-  { path: "affectemp", component: CardAffectempComponent },
-  { path: "task", component: TasksComponent },
-  { path: "updatetask", component: UpdateTaskComponent },
-  { path: "updatereport", component: UpdatereportComponent },
-  { path: "upgrade", component: UpgradeComponent },
+  { path: "reset", component: ResetComponent,canActivate : [AuthenticationGuard] },
+  { path: "updateprofile", component: UpdateprofileComponent ,canActivate : [AuthenticationGuard] },
+  { path: "updateproject", component: UpdateprojectComponent ,canActivate : [AuthenticationGuard]},
+  { path: "affectemp", component: CardAffectempComponent ,canActivate : [AuthenticationGuard]},
+  { path: "task", component: TasksComponent,canActivate : [AuthenticationGuard] },
+  { path: "updatetask", component: UpdateTaskComponent ,canActivate : [AuthenticationGuard]},
+  { path: "updatereport", component: UpdatereportComponent ,canActivate : [AuthenticationGuard]},
+  { path: "upgrade", component: UpgradeComponent ,canActivate : [AuthenticationGuard] },
 
 
 
 
 
-  { path: "login", component: LoginComponent,canActivate : [AuthenticationGuard] },
+  { path: "login", component: LoginComponent },
   {
     path: "auth",
     component: AuthComponent,

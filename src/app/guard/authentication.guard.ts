@@ -28,14 +28,14 @@ export class AuthenticationGuard implements CanActivate, CanActivateChild, CanLo
     // @ts-ignore
     if (next.component.name === 'LoginComponent' || next.component.name === 'RegisterpageComponent') {
       if (this.tss.getId() != null) {
-        if (this.authService.getRoles().includes("ROLE_ADMIN")) {
+        if (this.authService.getRoles().includes("ROLE_ADMIN")||this.authService.getRoles().includes("ROLE_MODERATOR")) {
           this.router.navigate(['admin']);
         } else {
           this.router.navigate(['home']);
         }
-        return false;
-      } else {
         return true;
+      } else {
+        return false;
       }
     } else {
       if (this.tss.getId() == null) {
@@ -47,23 +47,11 @@ export class AuthenticationGuard implements CanActivate, CanActivateChild, CanLo
           return true;
         }
       } else {
-        if (this.authService.getRoles().includes("ROLE_ADMIN")) {
-          // @ts-ignore
-          if(next.component.name !== 'AdminindexComponent') {
-            this.router.navigate(['admin']);
-            return false;
-          } else{
-            return true;
-          }
-        } else {
-          // @ts-ignore
-          if (next.component.name == 'AdminindexComponent') {
-            this.router.navigate(['home']);
-            return false;
-          } else {
-            return true;
-          }
+        if (this.authService.getRoles().includes("ROLE_ADMIN")||this.authService.getRoles().includes("ROLE_MODERATOR")) {
+        return true;
         }
+
+
       }
     }
 

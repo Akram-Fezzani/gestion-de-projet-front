@@ -72,7 +72,7 @@ import { CardTableReportComponent } from './components/cards/card-table-report/c
 import { UpdatereportComponent } from './components/updatereport/updatereport.component';
 import { CardUpdateReportComponent } from './components/cards/card-update-report/card-update-report.component';
 import { FooterAuthComponent } from './components/footers/footer-auth/footer-auth.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
+import { UpgradeComponent } from "./upgrade/upgrade.component";
 
 @NgModule({
   declarations: [
